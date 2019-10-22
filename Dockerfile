@@ -1,7 +1,10 @@
 FROM nvidia/cuda:9.0-runtime-ubuntu16.04
 ENV PATH /opt/conda/bin:$PATH
 
-RUN apt-get update \
+RUN apt-get update --fix-missing \
+    && apt-get install -y wget bzip2 ca-certificates \
+    libglib2.0-0 libxext6 libsm6 libxrender1 \
+    git mercurial subversion \
     && apt-get install -y --no-install-recommends \
     "build-essential" \
     "libboost-all-dev" \
