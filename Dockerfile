@@ -11,7 +11,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     echo "source activate base" >> ~/.bashrc
 
 RUN conda update conda -n root && conda install --yes \
-    python==2.7.5 \
+    python==2.7 \
     tensorflow-gpu==1.8.0 \
     && conda clean --yes --all \
     && pip install --upgrade \
