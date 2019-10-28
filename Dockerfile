@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-runtime-ubuntu16.04
+FROM nvidia/cuda:10.0-runtime-ubuntu16.04
 ENV PATH /opt/conda/bin:$PATH
 COPY conda.yml .
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
